@@ -1,0 +1,15 @@
+<!-- Generated template for the InfocardComponent component -->
+<div class="card" (click)="upward()">
+  <div class="color-bar" [style.background.color]="color"></div>
+  <div class="header" [style.color]="color">{{status}}</div>
+  <div class="container" style="display: -webkit-box">
+    <div class="text-container">
+      <div class="transportation-status"></div>
+      <p>运单号：{{trackingNumber}}</p>
+      <p>{{packageName}}</p>
+    </div>
+    <div class="goods-photo">
+      <img src="assets/">
+    </div>
+  </div>
+</div>
