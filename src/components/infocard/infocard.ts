@@ -16,18 +16,13 @@ export class InfocardComponent {
   @Input() trackingNumber: String;
   @Input() packageName: String;
   @Output() event = new EventEmitter();
-  color: String;
+  color: String = "green";
   constructor() {
-    if(this.status==="运输中") {
-      this.color="green";
-    }else if(this.status==="已完成")　{
-      this.color="blue";
-    }else if(this.status==="准备中") {
-      this.color="red";
-    }
+   
   }
  
   ionViewDidLoad() {
+    this.color="red";
   }
   upward(){
     this.event.emit({
@@ -35,5 +30,17 @@ export class InfocardComponent {
       num: this.trackingNumber,
       name: this.packageName,
     });
+  }
+  getColor() {
+    if(this.status==="运输中") {
+      this.color="green";
+      return this.color;
+    }else if(this.status==="已完成")　{
+      this.color="blue";
+      return this.color;
+    }else if(this.status==="准备中") {
+      this.color="red";
+      return this.color;
+    }
   }
 }

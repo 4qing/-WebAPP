@@ -1,7 +1,7 @@
 <!-- Generated template for the InfocardComponent component -->
 <div class="card" (click)="upward()">
-  <div class="color-bar" [style.background.color]="color"></div>
-  <div class="header" [style.color]="color">{{status}}</div>
+  <div class="color-bar" [style.backgroundColor]="getColor()"></div>
+  <div class="header" [style.color]="getColor()">{{status}}</div>
   <div class="container" style="display: -webkit-box">
     <div class="text-container">
       <div class="transportation-status"></div>
